@@ -120,6 +120,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+# Media stuff
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / "media"
+
 # Custom authentication
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
