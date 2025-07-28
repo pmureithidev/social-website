@@ -21,10 +21,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('account.urls'))
+    path('account/', include('account.urls')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]
 
-# helper static function
+# helper static function. useful for rendering images
 if settings.DEBUG:
     urlpatterns += static(
         settings.MEDIA_URL,
